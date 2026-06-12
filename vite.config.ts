@@ -1,3 +1,4 @@
+// ✅ Version finale correcte
 import path from "path";
 import { fileURLToPath } from "url";
 import tailwindcss from "@tailwindcss/vite";
@@ -9,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: '/site-test-1/',      // ← ajouté
-  plugins: [react(), tailwindcss(), viteSingleFile()],  // ← restauré
+  base: '/site-test-1/',                              // ✅ gardé
+  plugins: [react(), tailwindcss(), viteSingleFile()], // ✅ tous les plugins
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
